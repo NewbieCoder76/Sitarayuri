@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Specials & Collabs | Sitarayuri</title>
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/pages/specials.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-container">
+      <nav class="nav-left">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Product</a>
+        <a href="specials.html" class="nav-link active">Specials</a>
+      </nav>
+
+      <div class="nav-brand">
+        <a href="index.html" class="logo-text">SITARAYURI</a>
+      </div>
+
+      <nav class="nav-right">
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        
+        <div class="nav-utilities">
+          <button id="search-btn" class="icon-btn" aria-label="Search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+          <button id="wishlist-btn" class="icon-btn" aria-label="Wishlist">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <span class="badge" id="wishlist-count">0</span>
+          </button>
+          <button id="cart-btn" class="icon-btn" aria-label="Shopping Cart">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            <span class="badge" id="cart-count">0</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="specials-page">
+    <div class="container">
+      <section class="specials-header">
+        <h1 class="page-title">COLLAB DESIGNS</h1>
+        <p class="page-subtitle">Exclusive limited-run artistic patterns and co-branded releases.</p>
+      </section>
+
+      <section class="featured-collab-card">
+        <div class="collab-hero-image">
+          <img src="assets/images/Cherry.jpg" alt="Cherry Blossom Laser Etched Tumbler">
+          <span class="collab-badge">Limited Drop</span>
+        </div>
+        <div class="collab-hero-content">
+          <span class="collab-series-tag">SAKURA SERIES</span>
+          <h2>CHERRY BLOSSOM COLLAB</h2>
+          <p>Precision laser-etched botanical motifs on brushed gold stainless steel.</p>
+          
+          <div class="drop-timer" id="drop-timer">
+            <span class="timer-label">Drop Closes In:</span>
+            <div class="timer-units">
+              <span id="timer-hours">12</span>h <span id="timer-minutes">45</span>m <span id="timer-seconds">30</span>s
+            </div>
+          </div>
+
+          <button class="btn-primary" onclick="addToCart('collab-cherry-blossom', 'gold', 1)">Shop Limited Edition • $45.00</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="cart-overlay" class="cart-overlay"></div>
+  <aside id="cart-drawer" class="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3>Your Cart</h3>
+      <button id="close-cart-btn" class="close-btn">&times;</button>
+    </div>
+    <div id="cart-drawer-items" class="cart-drawer-body"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">$0.00</span>
+      </div>
+      <button id="checkout-btn" class="btn-primary full-width">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/navigation.js"></script>
+</body>
+</html>

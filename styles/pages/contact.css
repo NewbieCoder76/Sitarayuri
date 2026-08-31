@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Contact Page Styles
+   ========================================================================== */
+.contact-page {
+  padding: 3rem 0;
+}
+
+.contact-header {
+  margin-bottom: 3rem;
+}
+
+.contact-form-wrapper {
+  max-width: 600px;
+  background-color: var(--bg-white, #FFFFFF);
+  border: 1px solid var(--border-color, #E5E2DC);
+  border-radius: var(--radius-md, 8px);
+  padding: 2.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border-color, #E5E2DC);
+  border-radius: var(--radius-sm, 4px);
+  background-color: var(--bg-primary, #F9F8F6);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent-sage, #5C7060);
+  background-color: var(--bg-white, #FFFFFF);
+}
